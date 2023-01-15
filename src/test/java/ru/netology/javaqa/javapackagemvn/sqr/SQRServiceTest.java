@@ -8,16 +8,16 @@ public class SQRServiceTest {
     @Test
     public void shouldCalcExact() {
         SQRService service = new SQRService();
-        int expected = 10;
-        int actual = service.calcSqrt(99);
+        int actual = service.calcSqrt(200, 300);
+        int expected = 3;
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void shouldCalcInexact() {
+    public void shouldCalcboundaryvalues() {
         SQRService service = new SQRService();
-        int expected = 10;
-        int actual = service.calcSqrt(50);
+        int actual = service.calcSqrt(10, 100);
+        int expected = 1;
         Assertions.assertEquals(expected, actual);
     }
 }
